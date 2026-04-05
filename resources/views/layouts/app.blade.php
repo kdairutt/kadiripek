@@ -12,8 +12,12 @@
     <nav class="border-b border-gray-800 px-8 py-4 flex justify-between items-center">
         <a href="/" class="text-xl font-bold text-white">kadir.dev</a>
         <div class="flex gap-6 text-gray-400">
+            @if(!Route::is('home'))
             <a href="/" class="hover:text-white transition">Ana Sayfa</a>
+            @endif
+            <a href="/deneyimler" class="hover:text-white transition">Deneyim</a>
             <a href="/projeler" class="hover:text-white transition">Projeler</a>
+            <a href="/sertifikalar" class="hover:text-white transition">Sertifikalar</a>
             <a href="/hakkimda" class="hover:text-white transition">Hakkımda</a>
         </div>
     </nav>
@@ -25,7 +29,7 @@
 
     {{-- Footer --}}
     <footer class="border-t border-gray-800 px-8 py-6 text-center text-gray-500 text-sm">
-        © 2025 Kadir. Tüm hakları saklıdır.
+        © 2026 Abdülkadir İpek. Tüm hakları saklıdır.
     </footer>
 
 </body>
