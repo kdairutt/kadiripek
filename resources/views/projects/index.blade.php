@@ -13,15 +13,18 @@
                 @foreach($projects as $project)
                     <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
                         <span class="text-xs text-gray-500 uppercase tracking-widest">{{ $project->category }}</span>
-                        <h2 class="text-xl font-semibold mt-2 mb-3">{{ $project->title }}</h2>
+                        <a href="/projeler/{{ $project->id }}"> 
+                            <h2 class="text-xl font-semibold mt-2 mb-3">{{ $project->title }}</h2>
+                        </a>
                         <p class="text-gray-400 text-sm">{{ $project->description }}</p>
                         <div class="flex gap-4 mt-4">
-                            @if($project->url)
-                                <a href="{{ $project->url }}" class="text-sm text-white hover:underline">Siteye Git →</a>
-                            @endif
-                            @if($project->github_url)
-                                <a href="{{ $project->github_url }}" class="text-sm text-gray-400 hover:underline">GitHub →</a>
-                            @endif
+                            <div class="flex gap-4 mt-4">
+                                @if($project->link_url)
+                                    <a href="{{ $project->link_url }}" target="_blank" class="text-sm text-white hover:underline">
+                                        {{ $project->link_label ?? 'Bağlantıya Git' }} →
+                                    </a>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 @endforeach

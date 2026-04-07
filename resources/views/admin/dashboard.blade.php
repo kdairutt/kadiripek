@@ -9,10 +9,17 @@
 
     <nav class="border-b border-gray-800 px-8 py-4 flex justify-between items-center">
         <span class="text-xl font-bold">Admin Panel</span>
-        <form method="POST" action="/admin/logout">
-            @csrf
-            <button type="submit" class="text-gray-400 hover:text-white transition">Çıkış Yap</button>
-        </form>
+        <div class="flex items-center gap-6">
+            <a href="/" target="_blank" class="text-sm text-gray-400 hover:text-white transition">
+                Siteyi Görüntüle
+            </a>
+            <form method="POST" action="/admin/logout" class="flex items-center">
+                @csrf
+                <button type="submit" class="text-sm text-gray-400 hover:text-white transition bg-transparent border-0 p-0 cursor-pointer">
+                    Çıkış Yap
+                </button>
+            </form>
+        </div>
     </nav>
 
     <div class="max-w-4xl mx-auto py-12 px-8">

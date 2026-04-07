@@ -48,14 +48,16 @@
             </div>
 
             <div>
-                <label class="block text-sm text-gray-400 mb-2">Site URL</label>
-                <input type="text" name="url" value="{{ $project->url }}"
+                <label class="block text-sm text-gray-400 mb-2">Link Etiketi</label>
+                <input type="text" name="link_label" placeholder="Ör: GitHub, Dokümana Git, Demo..."
+                    value="{{ old('link_label', isset($project) ? $project->link_label : '') }}"
                     class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-500">
             </div>
 
             <div>
-                <label class="block text-sm text-gray-400 mb-2">GitHub URL</label>
-                <input type="text" name="github_url" value="{{ $project->github_url }}"
+                <label class="block text-sm text-gray-400 mb-2">Link URL</label>
+                <input type="text" name="link_url"
+                    value="{{ old('link_url', isset($project) ? $project->link_url : '') }}"
                     class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-gray-500">
             </div>
 

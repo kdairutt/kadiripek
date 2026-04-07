@@ -41,8 +41,8 @@ class ProjectController extends Controller
             'description' => $request->description,
             'category' => $request->category,
             'image' => $imagePath,
-            'url' => $request->url,
-            'github_url' => $request->github_url,
+            'link_url' => $request->link_url,
+            'link_label' => $request->link_label,
             'order' => $request->order ?? 1,
         ]);
 
@@ -71,8 +71,8 @@ class ProjectController extends Controller
             'description' => $request->description,
             'category' => $request->category,
             'image' => $imagePath,
-            'url' => $request->url,
-            'github_url' => $request->github_url,
+            'link_url' => $request->link_url,
+            'link_label' => $request->link_label,
             'order' => $request->order ?? 1,
         ]);
 

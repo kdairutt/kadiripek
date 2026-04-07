@@ -42,12 +42,12 @@
                                 {{ $experience->is_current ? 'Devam ediyor' : $experience->end_date }}
                             </p>
                         </div>
-                        <div class="flex gap-4">
+                        <div class="flex items-center gap-4 flex-shrink-0">
                             <a href="/admin/experiences/{{ $experience->id }}/edit" class="text-gray-400 hover:text-white transition text-sm">Düzenle</a>
-                            <form method="POST" action="/admin/experiences/{{ $experience->id }}">
+                            <form method="POST" action="/admin/experiences/{{ $experience->id }}" class="flex items-center">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="text-red-400 hover:text-red-300 transition text-sm"
+                                <button type="submit" class="text-red-400 hover:text-red-300 transition text-sm bg-transparent border-0 p-0 cursor-pointer"
                                     onclick="return confirm('Silmek istediğine emin misin?')">
                                     Sil
                                 </button>

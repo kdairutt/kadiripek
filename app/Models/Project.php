@@ -14,8 +14,8 @@ class Project extends Model
         'description',
         'category',
         'image',
-        'url',
-        'github_url',
+        'link_url',
+        'link_label',
         'order',
     ];
 }

@@ -41,12 +41,12 @@
                                 {{ $education->is_current ? 'Devam ediyor' : $education->end_year }}
                             </p>
                         </div>
-                        <div class="flex gap-4">
+                        <div class="flex gap-4 items-center">
                             <a href="/admin/educations/{{ $education->id }}/edit" class="text-gray-400 hover:text-white transition text-sm">Düzenle</a>
-                            <form method="POST" action="/admin/educations/{{ $education->id }}">
+                            <form method="POST" action="/admin/educations/{{ $education->id }}" class="flex items-center">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="text-red-400 hover:text-red-300 transition text-sm"
+                                <button type="submit" class="text-red-400 hover:text-red-300 transition text-sm bg-transparent border-0 p-0 cursor-pointer"
                                     onclick="return confirm('Silmek istediğine emin misin?')">Sil</button>
                             </form>
                         </div>

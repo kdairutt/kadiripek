@@ -44,12 +44,12 @@
                                 <p class="text-gray-400 text-sm mt-1">{{ Str::limit($project->description, 80) }}</p>
                             </div>
                         </div>
-                        <div class="flex gap-4 flex-shrink-0">
-                            <a href="/admin/projects/{{ $project->id }}/edit" class="text-gray-400 hover:text-white transition text-sm">Düzenle</a>
-                            <form method="POST" action="/admin/projects/{{ $project->id }}">
+                        <div class="flex items-center gap-4 flex-shrink-0">
+                            <a href="/admin/projects/{{ $project->id }}/edit" class="text-sm text-gray-400 hover:text-white transition">Düzenle</a>
+                            <form method="POST" action="/admin/projects/{{ $project->id }}" class="flex items-center">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="text-red-400 hover:text-red-300 transition text-sm"
+                                <button type="submit" class="text-sm text-red-400 hover:text-red-300 transition bg-transparent border-0 p-0 cursor-pointer"
                                     onclick="return confirm('Silmek istediğine emin misin?')">Sil</button>
                             </form>
                         </div>

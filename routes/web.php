@@ -5,9 +5,17 @@ Route::get('/', function () {
     return view("home");
 });
 
+// Public sayfaların route'ları
+
+
 use App\Http\Controllers\ProjectController;
 
 Route::get('/projeler', [ProjectController::class, 'index']);
+Route::get('/projeler/{id}', [ProjectController::class, 'show']);
+
+
+
+// Admin sayfalarının route'ları
 
 use App\Http\Controllers\AdminController;
 
