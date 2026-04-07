@@ -8,11 +8,10 @@
 <body class="bg-gray-950 text-white min-h-screen flex items-center justify-center">
     <div class="bg-gray-900 p-8 rounded-xl border border-gray-800 w-full max-w-sm">
         <h1 class="text-2xl font-bold mb-6 text-center">Admin Girişi</h1>
-
         @if(session('error'))
             <p class="text-red-400 text-sm mb-4 text-center">{{ session('error') }}</p>
         @endif
-
+        <a href="/" class="block text-center text-gray-500 hover:text-gray-300 text-sm my-6 transition">← Siteye Dön</a>
         <form method="POST" action="/admin/login">
             @csrf
             <input

@@ -59,3 +59,28 @@ Route::post('/admin/projects', [AdminProjectController::class, 'store']);
 Route::get('/admin/projects/{id}/edit', [AdminProjectController::class, 'edit']);
 Route::put('/admin/projects/{id}', [AdminProjectController::class, 'update']);
 Route::delete('/admin/projects/{id}', [AdminProjectController::class, 'destroy']);
+
+use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\EducationController;
+use App\Http\Controllers\CertificateController;
+
+Route::get('/deneyimler', [ExperienceController::class, 'index']);
+Route::get('/egitimler', [EducationController::class, 'index']);
+Route::get('/sertifikalar', [CertificateController::class, 'index']);
+
+Route::get('/hakkimda', function () {
+    return view('about');
+});
+
+use App\Http\Controllers\Admin\SkillController as AdminSkillController;
+
+Route::get('/admin/skills', [AdminSkillController::class, 'index']);
+Route::get('/admin/skills/create', [AdminSkillController::class, 'create']);
+Route::post('/admin/skills', [AdminSkillController::class, 'store']);
+Route::get('/admin/skills/{id}/edit', [AdminSkillController::class, 'edit']);
+Route::put('/admin/skills/{id}', [AdminSkillController::class, 'update']);
+Route::delete('/admin/skills/{id}', [AdminSkillController::class, 'destroy']);
+
+use App\Http\Controllers\HomeController;
+
+Route::get('/', [HomeController::class, 'index']);

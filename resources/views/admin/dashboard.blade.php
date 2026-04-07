@@ -38,6 +38,12 @@
                 <h2 class="text-lg font-semibold mb-2">🎓 Eğitimler</h2>
                 <p class="text-gray-400 text-sm">Eğitim bilgilerini ekle, düzenle, sil</p>
             </a>
+
+            <a href="/admin/skills" class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition">
+                <h2 class="text-lg font-semibold mb-2">⚡ Beceriler</h2>
+                <p class="text-gray-400 text-sm">Beceri ve teknolojileri ekle, düzenle, sil</p>
+            </a>
+
             <a href="/admin/certificates" class="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition">
                 <h2 class="text-lg font-semibold mb-2">📜 Sertifikalar</h2>
                 <p class="text-gray-400 text-sm">Sertifikaları ekle, düzenle, sil</p>
